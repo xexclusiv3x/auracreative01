@@ -7032,3 +7032,54 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-27 14:11:22 +1000
+
+
+Started GET "/profiles/1" for ::1 at 2015-06-27 14:43:10 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-06-27 14:43:10 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/andres/.rvm/gems/ruby-2.2.1@rails-421/gems/devise-3.5.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/andres/.rvm/gems/ruby-2.2.1@rails-421/gems/devise-3.5.1/app/views/devise/sessions/new.html.erb within layouts/application (38.6ms)
+  Rendered layouts/_navbar.html.erb (3.2ms)
+Completed 200 OK in 640ms (Views: 622.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/application.self-86f96a32c2bb3abc96fe1372799905a9daf50fba9ebb13c595b51b5537aed666.css?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/scaffolds.self-75ec02462f2a335a50b73295a7beecd2e4657eddfbcb6c642329e122e02109b5.css?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/profiles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-06-27 14:43:11 +1000

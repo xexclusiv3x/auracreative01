@@ -1,4 +1,5 @@
 == README
 
 This is a web application built with ruby on rails.
-s
+
+This is a new line of text.
