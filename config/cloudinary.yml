@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: vargas-industries
+  api_key: '611961386652852'
+  api_secret: rXThz_O4EyMJDVgTcCqISNvVV7w
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: vargas-industries
+  api_key: '611961386652852'
+  api_secret: rXThz_O4EyMJDVgTcCqISNvVV7w
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: vargas-industries
+  api_key: '611961386652852'
+  api_secret: rXThz_O4EyMJDVgTcCqISNvVV7w
+  enhance_image_tag: true
+  static_image_support: false
