@@ -8,9 +8,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  after_create :assign_resident_role
+  after_create :assign_resident_role, :create_profile
 
   def assign_resident_role
   	self.add_role :resident
+  end
+
+  def create_profile
+    self.profile = Profile.create!
   end
 end

@@ -12229,3 +12229,514 @@ Started GET "/assets/profiles.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b9
 
 
 Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-04 13:13:27 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFriendlyIdSlugs (20150704033233)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  CREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150704033233"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_business_users_on_business_profile_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_business_users_on_business_profile_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_business_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_business_users_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSlugToBusinessProfile (20150704033640)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "business_profiles" ADD "slug" varchar[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_business_profiles_on_slug" ON "business_profiles" ("slug")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150704033640"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_business_profiles_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_business_profiles_on_slug' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_business_users_on_business_profile_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_business_users_on_business_profile_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_business_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_business_users_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_roles_on_user_id_and_role_id' AND type='index'
+[0m
+
+
+Started GET "/profiles/4" for ::1 at 2015-07-04 13:41:02 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mBusinessProfile Load (0.4ms)[0m  [1mSELECT "business_profiles".* FROM "business_profiles" INNER JOIN "business_users" ON "business_profiles"."id" = "business_users"."business_profile_id" WHERE "business_users"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  Rendered profiles/show.html.erb within layouts/application (43.8ms)
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 3]]
+  Rendered layouts/_navbar.html.erb (26.8ms)
+Completed 200 OK in 595ms (Views: 456.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/business_profiles/1" for ::1 at 2015-07-04 13:41:06 +1000
+Processing by BusinessProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBusinessProfile Load (0.3ms)[0m  [1mSELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1[0m  [["slug", "1"]]
+  [1m[35mBusinessProfile Load (0.2ms)[0m  SELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?[0m  [["business_profile_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?  [["business_profile_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  Rendered business_profiles/show.html.erb within layouts/application (8.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 3]]
+  Rendered layouts/_navbar.html.erb (5.0ms)
+Completed 200 OK in 146ms (Views: 132.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/business_profiles/1/edit" for ::1 at 2015-07-04 13:41:08 +1000
+Processing by BusinessProfilesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBusinessProfile Load (0.2ms)[0m  [1mSELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1[0m  [["slug", "1"]]
+  [1m[35mBusinessProfile Load (0.1ms)[0m  SELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered business_profiles/_form.html.erb (323.8ms)
+  Rendered business_profiles/edit.html.erb within layouts/application (328.6ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 3]]
+  Rendered layouts/_navbar.html.erb (4.0ms)
+Completed 200 OK in 466ms (Views: 458.4ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/business_profiles/1" for ::1 at 2015-07-04 13:41:10 +1000
+Processing by BusinessProfilesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SZLSpnRjGhlbtvApJ1R1IF6bEZniJqCAoGES8h1hW9qXtEx/AG7FrcFLSamVCMMPfFIKvA5n9KoiBYSyhMoMiQ==", "business_profile"=>{"name"=>"Vargas Industries", "logo"=>"logo.jpg", "description"=>"IT services", "head_count"=>"2", "website_link"=>"www.vargasindustries.com.au"}, "commit"=>"Update Business profile", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35mBusinessProfile Load (0.1ms)[0m  SELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1  [["slug", "1"]]
+  [1m[36mBusinessProfile Load (0.1ms)[0m  [1mSELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mBusinessProfile Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "business_profiles" WHERE ("business_profiles"."id" != 1) AND "business_profiles"."slug" = ? LIMIT 1[0m  [["slug", "vargas-industries"]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "business_profiles" SET "slug" = ?, "updated_at" = ? WHERE "business_profiles"."id" = ?  [["slug", "vargas-industries"], ["updated_at", "2015-07-04 03:41:10.493236"], ["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/business_profiles/vargas-industries
+Completed 302 Found in 209ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/business_profiles/vargas-industries" for ::1 at 2015-07-04 13:41:10 +1000
+Processing by BusinessProfilesController#show as HTML
+  Parameters: {"id"=>"vargas-industries"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 3]]
+  [1m[36mBusinessProfile Load (0.8ms)[0m  [1mSELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1[0m  [["slug", "vargas-industries"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?  [["business_profile_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?[0m  [["business_profile_id", 1]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  Rendered business_profiles/show.html.erb within layouts/application (7.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 3]]
+  Rendered layouts/_navbar.html.erb (5.3ms)
+Completed 200 OK in 132ms (Views: 125.5ms | ActiveRecord: 1.6ms)
+  [1m[36mBusinessProfile Load (0.3ms)[0m  [1mSELECT  "business_profiles".* FROM "business_profiles"  ORDER BY "business_profiles"."id" ASC LIMIT 1000[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started DELETE "/users/sign_out" for ::1 at 2015-07-04 14:12:33 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LIuFuqMeuda/OM1ert5s6mZb8GoCgbwWR41dipM3MgTyrRtj1xNmYiXFdN4cgtrFRJLrT+7A6DzF6cvKCpxlVw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 55ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-04 14:12:33 +1000
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (26.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 148ms (Views: 147.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-07-04 14:12:35 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/andres/.rvm/gems/ruby-2.2.1@rails-421/gems/devise-3.5.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/andres/.rvm/gems/ruby-2.2.1@rails-421/gems/devise-3.5.1/app/views/devise/sessions/new.html.erb within layouts/application (100.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 198ms (Views: 193.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-07-04 14:12:36 +1000
+Processing by RegistrationsController#new as HTML
+  Rendered /Users/andres/.rvm/gems/ruby-2.2.1@rails-421/gems/devise-3.5.1/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/andres/.rvm/gems/ruby-2.2.1@rails-421/gems/devise-3.5.1/app/views/devise/registrations/new.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 120ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-04 14:12:55 +1000
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Myd401pagcAnd0WB+RsIXiVsHC4yl/vGVKcbFhsDwiIL9j/0yrYoRdFTInmfC3jaG5bnWqZdoNYoB9tfsb8vCw==", "user"=>{"email"=>"admin4@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin4@example.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin4@example.com"], ["encrypted_password", "$2a$10$6v4HXVXWuEe1hoR5AEU3y.Ii5InsSP/NAMoSiJjSCHYu5Zo4ucD4G"], ["created_at", "2015-07-04 04:12:55.379579"], ["updated_at", "2015-07-04 04:12:55.379579"]]
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT  "roles".* FROM "roles" WHERE "roles"."name" = ? AND "roles"."resource_type" IS NULL AND "roles"."resource_id" IS NULL  ORDER BY "roles"."id" ASC LIMIT 1[0m  [["name", "resident"]]
+  [1m[35mRole Exists (0.3ms)[0m  SELECT  1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND "roles"."id" = ? LIMIT 1  [["user_id", 4], ["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "roles".id FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users_roles" ("user_id", "role_id") VALUES (?, ?)  [["user_id", 4], ["role_id", 2]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "profiles" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-07-04 04:12:55.440847"], ["updated_at", "2015-07-04 04:12:55.440847"]]
+  [1m[35mProfile Load (0.5ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "profiles" SET "user_id" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["user_id", 4], ["updated_at", "2015-07-04 04:12:55.450853"], ["id", 5]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-07-04 04:12:55.456124"], ["current_sign_in_at", "2015-07-04 04:12:55.456124"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-07-04 04:12:55.457366"], ["id", 4]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/5/edit
+Completed 302 Found in 218ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/profiles/5/edit" for ::1 at 2015-07-04 14:12:55 +1000
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  Rendered profiles/_form.html.erb (149.8ms)
+  Rendered profiles/edit.html.erb within layouts/application (153.5ms)
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 4]]
+  Rendered layouts/_navbar.html.erb (3.8ms)
+Completed 200 OK in 250ms (Views: 245.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/profiles/5" for ::1 at 2015-07-04 14:15:11 +1000
+Processing by ProfilesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i8l97uLZ6sw7pWiBXUWggMI5+3taZIIUG2btWaQ+MduzGDrJcjVDSc2BD3k7VdAE/MMAD86u2QRnxi0QDoLc8g==", "profile"=>{"name"=>"John Smith", "profile_pic"=>#<ActionDispatch::Http::UploadedFile:0x007f83ff6e5020 @tempfile=#<Tempfile:/var/folders/fd/xqp2z4z533n3t7skxcx_brm00000gn/T/RackMultipart20150704-2097-lfuxv2.jpg>, @original_filename="andres.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"profile[profile_pic]\"; filename=\"andres.jpg\"\r\nContent-Type: image/jpeg\r\n">, "phone"=>"9494949", "bio"=>"Test"}, "commit"=>"Update Profile", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "profiles" SET "name" = ?, "profile_pic" = ?, "phone" = ?, "bio" = ?, "updated_at" = ? WHERE "profiles"."id" = ?[0m  [["name", "John Smith"], ["profile_pic", "z6vu4951rk1gc0qf5eat.jpg"], ["phone", "9494949"], ["bio", "Test"], ["updated_at", "2015-07-04 04:15:11.978922"], ["id", 5]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "profiles" SET "profile_pic" = 'image/upload/v1435983302/z6vu4951rk1gc0qf5eat.jpg' WHERE "profiles"."id" = ?  [["id", 5]]
+  [1m[36m (44.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/5
+Completed 302 Found in 5845ms (ActiveRecord: 46.5ms)
+
+
+Started GET "/profiles/5" for ::1 at 2015-07-04 14:15:17 +1000
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mBusinessProfile Load (0.3ms)[0m  [1mSELECT "business_profiles".* FROM "business_profiles" INNER JOIN "business_users" ON "business_profiles"."id" = "business_users"."business_profile_id" WHERE "business_users"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  Rendered profiles/show.html.erb within layouts/application (7.0ms)
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 4]]
+  Rendered layouts/_navbar.html.erb (7.0ms)
+Completed 200 OK in 153ms (Views: 133.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/business_profiles" for ::1 at 2015-07-04 14:15:22 +1000
+Processing by BusinessProfilesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mBusinessProfile Load (0.3ms)[0m  [1mSELECT "business_profiles".* FROM "business_profiles"[0m
+  Rendered business_profiles/index.html.erb within layouts/application (10.5ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  [1m[36mRole Load (0.2ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 4]]
+  Rendered layouts/_navbar.html.erb (4.0ms)
+Completed 200 OK in 105ms (Views: 101.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/business_profiles/vargas-industries" for ::1 at 2015-07-04 14:15:24 +1000
+Processing by BusinessProfilesController#show as HTML
+  Parameters: {"id"=>"vargas-industries"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mBusinessProfile Load (0.3ms)[0m  [1mSELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1[0m  [["slug", "vargas-industries"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?  [["business_profile_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?[0m  [["business_profile_id", 1]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 3]]
+  Rendered business_profiles/show.html.erb within layouts/application (5.4ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mRole Load (0.1ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 4]]
+  Rendered layouts/_navbar.html.erb (3.3ms)
+Completed 200 OK in 96ms (Views: 85.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/business_profiles/vargas-industries/join" for ::1 at 2015-07-04 14:15:25 +1000
+Processing by BusinessProfilesController#join as HTML
+  Parameters: {"id"=>"vargas-industries"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mBusinessProfile Load (0.2ms)[0m  SELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1  [["slug", "vargas-industries"]]
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ? AND "users"."id" = ? LIMIT 1[0m  [["business_profile_id", 1], ["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "business_users" ("business_profile_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["business_profile_id", 1], ["user_id", 4], ["created_at", "2015-07-04 04:15:25.401581"], ["updated_at", "2015-07-04 04:15:25.401581"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/business_profiles/vargas-industries
+Completed 302 Found in 171ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/business_profiles/vargas-industries" for ::1 at 2015-07-04 14:15:25 +1000
+Processing by BusinessProfilesController#show as HTML
+  Parameters: {"id"=>"vargas-industries"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mBusinessProfile Load (0.2ms)[0m  SELECT  "business_profiles".* FROM "business_profiles" WHERE "business_profiles"."slug" = ?  ORDER BY "business_profiles"."id" ASC LIMIT 1  [["slug", "vargas-industries"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?[0m  [["business_profile_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" INNER JOIN "business_users" ON "users"."id" = "business_users"."user_id" WHERE "business_users"."business_profile_id" = ?  [["business_profile_id", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 3]]
+  [1m[35mProfile Load (0.2ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 4]]
+  Rendered business_profiles/show.html.erb within layouts/application (6.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 4]]
+  Rendered layouts/_navbar.html.erb (3.8ms)
+Completed 200 OK in 144ms (Views: 138.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/profiles/5" for ::1 at 2015-07-04 14:15:30 +1000
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mBusinessProfile Load (0.3ms)[0m  SELECT "business_profiles".* FROM "business_profiles" INNER JOIN "business_users" ON "business_profiles"."id" = "business_users"."business_profile_id" WHERE "business_users"."user_id" = ?  [["user_id", 4]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 4]]
+  Rendered profiles/show.html.erb within layouts/application (5.9ms)
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))  [["user_id", 4]]
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 116ms (Views: 109.8ms | ActiveRecord: 1.0ms)
