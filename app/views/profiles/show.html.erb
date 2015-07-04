@@ -25,7 +25,16 @@
   <%= @profile.bio %>
 </p>
 
+<strong>Companies I work at</strong>
+<ul>
+  <% @business_profiles.each do |business_profile| %>
+    <li><%= link_to business_profile.name, business_profile_path(business_profile) %></li>
+  <% end %>
+</ul>
+
 
 <% if current_user.profile == @profile %>
-	<%= link_to 'Edit my profile', edit_profile_path(@profile), class: 'btn btn-warning' %>
+	<%= link_to 'Edit my profile', edit_profile_path(@profile), class: 'btn btn-warning' %><br><br>
 <% end %>
+
+<%= link_to 'Create your business profile', new_business_profile_path, class: 'btn btn-success' %>
