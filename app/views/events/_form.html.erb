@@ -4,8 +4,8 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.association :business_profile, label:   'Is this event for a listed business?' %>
-    <%= f.input :description %>
-    <%= f.input :location %>
+    <%= f.input :description, placeholder: 'Write info about the event' %>
+    <%= f.input :location, input_html: { value: 'Aura Creative'} %>
     <%= f.input :starts %>
     <%= f.input :ends %>
     <%= f.input :image %>
